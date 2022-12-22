@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&family=Roboto:wght@300;400&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&family=Roboto:wght@300;400&display=swap');
 
 *{
     padding: 0;
@@ -6,24 +6,31 @@
     box-sizing: border-box;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 body{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background:#000000;
-    opacity:0.95;
+    opacity:0.9;
 }
+
+form p{
+    text-align: center;
+}
+
 h1{
     text-align: center;
     font-family: 'Frank Ruhl Libre', serif;
     color:#ffffff;
 }
+
 .container{
     border:1px solid black;
     margin: 10px 0 0 0;
     width: 600px;
-    height: 160px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,12 +47,11 @@ input:focus{
 }
 .button{
     display:flex;
-    justify-content:baseline;
     align-items:center;
     gap:10px;
-}
-#btn{
-    width: 490px;
+} 
+ #btn{
+    width: 460px;
     height: 50px;
     background: black;
     color: white;
@@ -54,22 +60,20 @@ input:focus{
      cursor: pointer;
      font-size: 1em;
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-#btn:hover{
-    font-size: 1.1em;
+} 
+ #btn:hover{
     background:#000000d3;
     transition: background 0.7s ease 0.2s;
     transition: font-size 0.1s ease-in 0.1s;
-}
-#clearBtn{
-    width: 40px;
+} 
+ #clearBtn{
+    width: 60px;
     height: 40px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     opacity: 0.8;
-    border-radius: 50%;
+    border-radius: 10%;
     background: #ffffff;
-    outline:1px solid red;
     transition-property: background,transform,color;
     transition-duration: 0.5s;
     transition-delay:0.2s;
@@ -77,8 +81,22 @@ input:focus{
     opacity:0.7;
     cursor: pointer;
     font-family: Helvetica;
+    margin-top: 10px;
+} 
+.statistics-buttons{
+    display:flex;
+    gap: 40px;
+    margin-top: 10px;
 }
-
+.statistics-buttons button{
+    opacity: 0.8;
+    padding: 10px 10px;
+    background-color:#ffffff;
+}
+.statistics-buttons button:hover{
+    background: rgba(0, 0, 0, 0.591);
+    transition: background 0.2s ease-in 0.1s;
+}
 #clearBtn:hover{
     background: #00000036;
     transform:scale(1.1);
@@ -88,5 +106,4 @@ input:focus{
 .showResultWrapper{
       margin-block-start: 20px;
       color:#ffffff;
-
-}
+} 

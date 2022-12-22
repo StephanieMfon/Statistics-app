@@ -5,6 +5,13 @@ const form = document.querySelector('form')
 const inputs = document.querySelectorAll('input')
 const button = document.getElementById('btn')
 const clearBtn = document.getElementById('clearBtn')
+
+const meanBtn = document.getElementById('mean-Btn')
+const modeBtn = document.getElementById('mode-Btn')
+const medianBtn = document.getElementById('median-Btn')
+const standardDevBtn = document.getElementById('standard-Dev')
+const varianceBtn = document.getElementById('variance-Btn')
+
 const square1 = document.getElementById('square-1')
 const square2 = document.getElementById('square-2')
 const square3 = document.getElementById('square-3')
@@ -43,7 +50,22 @@ const values =[square1.value,square2.value,square3.value,square4.value,square5.v
     })
     return numbersArray
 }
+meanBtn.onclick=()=>{
+    showMean.innerText = `Mean: ${getMean(getValues())}`
+}
+medianBtn.onclick=()=>{
+    showMedian.innerText = `Median: ${getMedian(getValues())}`
+}
+modeBtn.onclick=()=>{
+    showMode.innerText = `Mode: ${getMode(getValues())}`
 
+}
+varianceBtn.onclick=()=>{
+    showVariance.innerText = `Variance: ${getVariance(getValues())}`
+}
+standardDevBtn.onclick=()=>{
+    showStandardDeviation.innerText = `StandardDeviation: ${getStandardDeviation(getValues())}`
+}
 clearBtn.onclick = () =>{
     square1.value = 0,square2.value= 0,square3.value = 0, square4.value = 0,square5.value = 0,square6.value = 0,
     square7.value = 0, square8.value = 0, square9.value =0, square10.value =0
@@ -53,6 +75,7 @@ button.onclick=()=>{
    showResult()
    console.log(getVariance(getValues()))
 }
+
 // showResult
 const showResult = () =>{
    showMean.innerText = `Mean: ${getMean(getValues())}`
